@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Manager</title>
+
+    <link rel="icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;800&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1>Administrador de tareas</h1>
+    </header>
+    <main>
+        <label>
+            <input id="taskInput" type="text" placeholder="¿Qué necesitas hacer?">
+        </label>
+        <ul id="taskList"></ul>
+        <div class="info">
+            <p>Quedan 0 tareas</p>
+            <div>
+                <button class="button" disabled>Todas</button>
+                <button class="button">Pendientes</button>
+                <button class="button">Completadas</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Autor: Gilberto López Ambrosino</p>
+        <p>GitHub: <a
+                href="https://github.com/hittten/typescript-task-manager">https://github.com/hittten/typescript-task-manager</a>
+        </p>
+    </footer>
+    <div class="modal">
+        <div class="box">
+            <h2>¿Estás seguro de que deseas eliminar esta tarea?</h2>
+            <p>Una tarea para eliminar</p>
+            <div>
+                <button class="button large">Si</button>
+                <button class="button large">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+/* General */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: lightgrey;
+    margin: 0;
+    padding: 5px;
+    color: darkslategrey;
+    font-weight: lighter;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Slab', serif;
+}
+
+span.material-icons {
+    cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: darkslategrey;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.button.large {
+    font-size: 14px;
+    padding: 10px 25px;
+}
+
+.button:active {
+    box-shadow: none;
+}
+
+.button:disabled {
+    cursor: default;
+    background: darkgrey;
+    color: lightgrey;
+    box-shadow: none;
+}
+
+/* Header */
+header h1 {
+    font-size: 30px;
+    color: darkgrey;
+    text-align: center;
+}
+
+/* Task */
+main #taskInput {
+    width: 100%;
+    padding: 12px;
+    margin: 4px 0;
+    border: none;
+    outline: none;
+}
+
+main {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+    max-width: 400px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+main ul {
+    min-height: 300px;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    border-top: 1px solid darkgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+main ul li {
+    display: flex;
+    margin: 10px 0;
+    align-content: center;
+    justify-content: space-between;
+}
+
+main ul li div {
+    display: flex;
+    align-items: baseline;
+}
+
+main ul li.updating div,
+main ul li.updating span.btn-delete {
+    display: none;
+}
+
+main ul li.updating input {
+    width: 100%;
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid darkgrey;
+}
+
+main ul li input:checked+span {
+    text-decoration: line-through;
+}
+
+main div.info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 5px 10px;
+    grid-gap: 5px;
+}
+
+main div.info p {
+    font-size: 10px;
+}
+
+main div.info div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: 15px;
+}
+
+footer p {
+    margin: 5px 0;
+    color: darkgrey;
+    font-size: 10px;
+    text-align: center;
+}
+
+footer p a {
+    color: cadetblue;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.modal.open {
+    display: block;
+}
+
+.modal .box {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+    justify-items: center;
+    padding: 10px 20px;
+    background: white;
+    max-width: 350px;
+    min-height: 300px;
+    margin: 0 auto;
+}
+
+.modal .box * {
+    margin: 0;
+}
+
+.modal .box div {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+
+@media screen and (min-width: 350px) {
+    .modal .box {
+        margin-top: 3vw;
+    }
+}
